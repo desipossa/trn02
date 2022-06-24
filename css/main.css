@@ -703,6 +703,10 @@
     background: #ddd;
 }
 
+#footer .top dt {
+    font-weight: 700;
+}
+
 
 #footer .top i {
     font-size: 25px;

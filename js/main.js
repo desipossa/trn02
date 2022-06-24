@@ -103,9 +103,6 @@ $(function () {
         if (lnk) {
             window.open(lnk);
         }
-
-    })
-
-
+    });
 
 })
