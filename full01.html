@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            height: 100vh
+        }
+
+        section:nth-child(odd) {
+            background: #f1f1f1;
+        }
+
+        ul {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <section id="co01"></section>
+        <section id="co02"></section>
+        <section id="co03"></section>
+        <section id="co04"></section>
+    </div>
+    <ul>
+        <li><a href="#co01">01</a></li>
+        <li><a href="#co02">02</a></li>
+        <li><a href="#co03">03</a></li>
+        <li><a href="#co04">04</a></li>
+    </ul>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+        $('ul>li>a').on('click', function (e) {
+            e.preventDefault();
+            console.log($(this.hash).offset().top)
+            $('html,body').animate({ scrollTop: $(this.hash).offset().top })
+        })
+    </script>
+</body>
+
+</html>
